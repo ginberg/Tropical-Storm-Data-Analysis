@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scrolloverflow.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+  <script type="text/javascript" src="shared/shiny.js" ></script>
+  <!---<script type="text/javascript" src="htmlwidgets-0.9/htmlwidgets.js"></script>
+  <script type="text/javascript" src="plotly-binding-4.7.1/plotly.js"></script>-->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+
+	<div class="section active" id="section0">
+	  <h1>Tropical Storm Analysis</h1>
+	  <p>Please scroll down for the interesting stuff..</p>
+	</div>
+	
+	<div class="section" id="section1">
+	    <div class="slide active">
+	      <h1>Number of storms</h1>
+	      <div id="stormCountPlot" class="shiny-plot-output" style="width: 100%; height: 500px"></div>
+	    </div>
+	</div>
+	
+	<div class="section" id="section2">
+	   <div class="slide active">
+	      <h1>Storm names</h1>
+	      <div id="stormNamesPlot" class="shiny-plot-output" style="width: 100%; height: 300px"></div>
+	    </div>
+	</div>
+
+</div>
+
+</body>
+</html>
